@@ -54,6 +54,8 @@
 		0D04B2F325164204006333EF /* Mach-O_ProjectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Mach-O_ProjectUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D04B2F725164204006333EF /* Mach_O_ProjectUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Mach_O_ProjectUITests.m; sourceTree = "<group>"; };
 		0D04B2F925164204006333EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0D04B305251642D9006333EF /* loader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = loader.h; sourceTree = "<group>"; };
+		0D04B306251642E5006333EF /* fat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = fat.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,8 @@
 		0D04B2CF25164201006333EF /* Mach-O_Project */ = {
 			isa = PBXGroup;
 			children = (
+				0D04B305251642D9006333EF /* loader.h */,
+				0D04B306251642E5006333EF /* fat.h */,
 				0D04B2D025164201006333EF /* AppDelegate.h */,
 				0D04B2D125164201006333EF /* AppDelegate.m */,
 				0D04B2D325164201006333EF /* SceneDelegate.h */,

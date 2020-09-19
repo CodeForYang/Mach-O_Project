@@ -55,10 +55,10 @@ struct mach_header {
 	uint32_t	magic;		/* mach magic number identifier */
 	cpu_type_t	cputype;	/* cpu specifier */
 	cpu_subtype_t	cpusubtype;	/* machine specifier */
-	uint32_t	filetype;	/* type of file */
-	uint32_t	ncmds;		/* number of load commands */
-	uint32_t	sizeofcmds;	/* the size of all the load commands */
-	uint32_t	flags;		/* flags */
+	uint32_t	filetype;	/* type of file */ Mach-O的文件类型
+	uint32_t	ncmds;		/* number of load commands */ Mach-O文件中,加载命令的数量
+	uint32_t	sizeofcmds;	/* the size of all the load commands */ Mach-O文件中,加载命令所占的总字节大小
+	uint32_t	flags;		/* flags */ 标志信息
 };
 
 /* Constant for the magic field of the mach_header (32-bit architectures) */
@@ -227,23 +227,37 @@ struct mach_header_64 {
 					   the filesystem. */
 
 /*
- * The load commands directly follow the mach_header.  The total size of all
- * of the commands is given by the sizeofcmds field in the mach_header.  All
- * load commands must have as their first two fields cmd and cmdsize.  The cmd
- * field is filled in with a constant for that command type.  Each command type
- * has a structure specifically for it.  The cmdsize field is the size in bytes
- * of the particular load command structure plus anything that follows it that
- * is a part of the load command (i.e. section structures, strings, etc.).  To
- * advance to the next load command the cmdsize can be added to the offset or
- * pointer of the current load command.  The cmdsize for 32-bit architectures
- * MUST be a multiple of 4 bytes and for 64-bit architectures MUST be a multiple
- * of 8 bytes (these are forever the maximum alignment of any load commands).
- * The padded bytes must be zero.  All tables in the object file must also
- * follow these rules so the file can be memory mapped.  Otherwise the pointers
- * to these tables will not work well or at all on some machines.  With all
- * padding zeroed like objects will compare byte for byte.
+ * load命令直接跟随mach_header。所有的总大小
+
+ 命令的大小是由mach_header中的sizeofcmds字段给出的。所有
+
+ *加载命令的前两个字段必须是cmd和cmdsize。cmd的
+
+ 字段是用该命令类型的常量填充的。每个命令类型
+
+ *有一个专门针对它的结构。cmdsize字段是以字节为单位的大小
+
+ *特定的load命令结构，加上它后面的任何内容
+
+ *是load命令的一部分(即片段结构、字符串等)。来
+
+ 可以将cmdsize添加到偏移量或
+
+ *当前加载命令的指针。32位体系结构的cmdsize
+
+ *必须是4字节的倍数，对于64位架构必须是4字节的倍数
+
+ * 8字节(这永远是任何加载命令的最大对齐)。
+
+ *填充的字节必须为零。对象文件中的所有表也必须
+
+ *遵循这些规则，文件可以被内存映射。否则指针
+
+ * to这些表将不能很好地工作，或在一些机器上完全。与所有
+
+ *填充为零的对象将对字节进行比较。
  */
-struct load_command {
+struct load_command { 加载命令
 	uint32_t cmd;		/* type of load command */
 	uint32_t cmdsize;	/* total size of command in bytes */
 };
