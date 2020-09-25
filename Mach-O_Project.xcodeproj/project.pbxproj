@@ -16,6 +16,7 @@
 		0D04B2E325164204006333EF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D04B2E225164204006333EF /* main.m */; };
 		0D04B2ED25164204006333EF /* Mach_O_ProjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D04B2EC25164204006333EF /* Mach_O_ProjectTests.m */; };
 		0D04B2F825164204006333EF /* Mach_O_ProjectUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D04B2F725164204006333EF /* Mach_O_ProjectUITests.m */; };
+		0DC7FED7251DC96B0034C946 /* xnu-6153.121.1 in Resources */ = {isa = PBXBuildFile; fileRef = 0DC7FED6251DC96B0034C946 /* xnu-6153.121.1 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,7 +58,7 @@
 		0D04B305251642D9006333EF /* loader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = loader.h; sourceTree = "<group>"; };
 		0D04B306251642E5006333EF /* fat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = fat.h; sourceTree = "<group>"; };
 		0DC7FE26251B3D1C0034C946 /* codesign.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = codesign.h; sourceTree = "<group>"; };
-		0DC7FED5251DC8BB0034C946 /* xnu-6153.121.1 */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "xnu-6153.121.1"; path = "../../Downloads/xnu-6153.121.1"; sourceTree = "<group>"; };
+		0DC7FED6251DC96B0034C946 /* xnu-6153.121.1 */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "xnu-6153.121.1"; path = "Mach-O_Project/xnu-6153.121.1"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,7 +89,7 @@
 		0D04B2C425164201006333EF = {
 			isa = PBXGroup;
 			children = (
-				0DC7FED5251DC8BB0034C946 /* xnu-6153.121.1 */,
+				0DC7FED6251DC96B0034C946 /* xnu-6153.121.1 */,
 				0D04B2CF25164201006333EF /* Mach-O_Project */,
 				0D04B2EB25164204006333EF /* Mach-O_ProjectTests */,
 				0D04B2F625164204006333EF /* Mach-O_ProjectUITests */,
@@ -250,6 +251,7 @@
 			files = (
 				0D04B2E025164204006333EF /* LaunchScreen.storyboard in Resources */,
 				0D04B2DD25164204006333EF /* Assets.xcassets in Resources */,
+				0DC7FED7251DC96B0034C946 /* xnu-6153.121.1 in Resources */,
 				0D04B2DB25164201006333EF /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
